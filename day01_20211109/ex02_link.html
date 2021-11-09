@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크태그 연습</title>
+    <style> 
+        /* a태그 스타일 적용. 태그선택자*/
+        a {
+            color: red;
+        }
+        /*link : 밑줄 효과*/
+         a:link{
+            text-decoration: ;
+        }
+        /* hover : 해당 요소에 마우스를 올렸을 때
+            가상선택자(:) 
+            아래에 코드로 실제로 명시되어 있지는 않고 사용자의 액션에 따라 바뀜.*/
+        a:hover {
+            color: rosybrown;
+            background-color: red;
+        } 
+    </style>
+</head>
+<body>
+    <!-- UI/UX -->
+    <!-- 아마존 홈페이지로 이동하는 링크(새창에서 이동됨) // <br> : 줄바꿈  -->
+    <a href="https://www.amazon.com/">아마존으로 이동</a><br><br>
+    <!-- 쿠팡 홈페이지로 이동하는 링크 -->
+    <a href="https://www.coupang.com" target = "_blank">쿠팡으로 이동</a>
+    <!-- 이미지 클릭했을 때 링크 -->
+    <a href="http://www.apple.com" target="_blank">
+    <!-- src : 출력할 그림 경로, alt : 그림이 안뜰 경우 보여줄 텍스트 
+    alt 일때 그림은 안떠도 링크는 뜸.-->
+        <img src="../images/apple_logo1.png" alt="사과">
+        </a>
+
+    <img src="../images/apple_logo.png" alt="apple logo">
+</body>
+</html>
