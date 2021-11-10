@@ -8,6 +8,7 @@
 </head>
 <body>
     <!-- <form action="test" method="get">
+    <!-- form태그 안에 넣어야 하는 것들은 name이 반드시 있어야 한다.★★ -->
         <!-- temp?aa=안녕 -->
         <!-- test?ddd=ㅎㅎㅎ -->
         <!-- action속성값 : 서버주소
@@ -15,12 +16,12 @@
         <!-- test?ddd=ㅎㅎㅎ&ccc=ㄴㄴㄴ => &로 연결 -->
         <!-- test?ddd=ㅇㅇㅇ&ccc=ㄴㄴㄴ&eee=ㄷㄷㄷ -->
         <!-- [action값]?[input name값] = [입력한값] -->
-        입력1: <input type="text" name="ddd"><br>
+        <!-- 입력1: <input type="text" name="ddd"><br>
         입력2: <input type="text" name="ccc"><br>
         입력3: <input type="text" name="eee"><br>
-        <input type="submit" value="전송"> -->
+        <input type="submit" value="전송"> --> -->
 
-        <form action="test" method="post">
+        <form action="test" method="get">
             <!-- temp?aa=안녕 -->
             <!-- test?ddd=ㅎㅎㅎ -->
             <!-- action속성값 : 서버주소
@@ -32,10 +33,67 @@
             입력2: <input type="text" name="ccc"><br>
             입력3: <input type="text" name="eee"><br>
             <input type="submit" value="전송"> -->
+            <!-- 반드시 name속성이 있어야 된다. name속성이 없으면 담아갈 곳이 없기 때문에 불가능  -->
             입력1: <input type="text" name="ddd" placeholder="검색어입력"><br>
             입력2: <input type="text" name="ccc"><br>
             입력3: <input type="text" name="eee"><br>
-            <input type="submit" value="전송">
+
+
+            <!-- select -->
+            국가 : <select name="nation">
+                <option value="" selected>선택하세요</option>
+                <option value="korea">대한민국</option>
+                <option value="canada">캐나다</option>
+                <option value="usa">미국</option>
+                <option value="australia">호주</option>
+            </select><br>
+           <!--  http://127.0.0.1:5500/day01_20211109/test?ddd=&ccc=&eee=&nation=korea -->
+           
+
+           <!-- 셀렉트를 활용하여 이메일 입력 폼을 만들어봅시다. -->
+
+           이메일 : <input type="text" name="email" placeholder="이메일아이디">@
+                    <input type="text" name="domain">
+                    <select name = "domain">
+                    <option value="">직접입력</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="daum.net">daum.net</option>
+                    <option value="google.com">gmail.com</option>
+                </select><br>
+
+                <!-- 장문의 글을 쓸 필요가 있을 때 -->
+                <textarea name="contents" cols="10" rows="5"></textarea><br>
+                
+                <!-- 비밀번호 -->
+                <label for="pw">비밀번호</label> <input type="password" id="pw" name="pw" ><br>
+                <!-- http://127.0.0.1:5500/day01_20211109/test?ddd=&ccc=&eee=&nation=&email=&domain=&domain=&contents=&pw=1234 -->
+           
+                <!-- radio 버튼 (선택항목이 name이 모두 같아야 함) : 여러개 중에서 한개 선택-->
+                가입유형: 
+                <input type="radio" id="p" name="joinType" value="personal"> 
+                    <label for="p">개인</label> 
+                <input type="radio" id="t" name="joinType" value="commercial">
+                    <label for="t">사업자</label>       
+                <input type="radio" id="c" name="joinType" value="no">
+                    <label for="c">해당없음</label><br>
+                
+                
+               
+                <!-- http://127.0.0.1:5500/day01_20211109/test?ddd=&ccc=&eee=&nation=&email=&domain=&domain=&contents=&pw=&joinType=commercial -->
+                <!--ㅇjoinType 네임 속성에서 value값이 결과로 넘어감 -->
+
+                <!-- checkbox  : 여러개 선택 가능-->  
+                활용가능언어:
+                <input type="checkbox" name="lang" value="java"> 자바
+                <input type="checkbox" name="lang" value="mysql"> mysql
+                <input type="checkbox" name="lang" value="html"> html
+                <input type="checkbox" name="lang" value="python"> python  <br>  
+                
+                생일:
+                <input type="date" name="birth">
+
+                <br> 
+                 <input type="submit" value="전송">
 
 </body>
 </html>
