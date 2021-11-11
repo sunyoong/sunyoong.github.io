@@ -104,6 +104,51 @@ repository 만들기
 - react.js, node.js, vue.js~~
 
 
+## 수업내용 3일차(211111)
+1. javascript function
+ - 함수(자바의 메서드랑 비슷)
+ - 특정 기능을 수행하는 코드 블록
+ - 호출해줘야 실행 되는 형태.
+ - 특정 이벤트가 발생했을 때 함수를 호출 
+     - 특정이벤트? => 뭔가를 바꿀 때 이벤트가 발생했다. => 이때 함수가 호출됨. 
+                     글자를 클릭하거나 이럴때. 
+         - click, doubleclick, mouse over, keyup, keydown
+
+     - 매개변수, 리턴 등 있음. 
+
+
+2. id속성 vs class 속성
+ - id속성 
+    - 한 문서 안에서 id 속성값은 유일해야 한다. (그니까 아이디 하나에 값 하나씩)
+    - css 적용시 사용, javascript 에서 제어할 때도 사용 
+    
+ - class 속성
+    - css 적용할 때 많이 사용함. 
+    - 여러 태그에 동일한 class 값을 적용할 수 있다. (중복 가능)
+    - 한번에 여러 class를 동시에 적용할 수 있다. 
+        - ex) p태그에 class1, class2, class3을 동시에 적용하고 싶다면
+        ``` 
+        <p class="class1 class2 class3"></p>
+        ```
+
+
+3. DOM 가져오기
+ - 대부분 document. 으로 시작함.
+  - document는 현재 html 문서를 가리킴.
+- getElementById('id속성값') => id만 가져옴. 이게 속도나 이런게 빠르다는 사람도 있음
+  - 현재 html에 작성된 태그 중 특정 id속성값을 가지고 있는 요소를 가져옴.
+- querySelector() => id 제외한 요소는 이걸로? 의견이 분분함. 
+  - id, class, 태그 등 여러 요소를 가져올 수 있음. 
+  - id를 가져올 때는 id앞에 #을 붙여야 함.
+     - ex) id1이라는 요소를 가져온다면 document.querySelector('#id1')
+  - class를 가져올 때는 class 앞에 .을 붙여야 함.
+     - ex) class1 이라는 요소를 가져온다면 document.querySelector('.class1')
+- getElementsByClassName()
+  - 현재 html에 작성된 태그 중 특정 class속성값을 가지고 있는 요소를 가져옴.
+  - class 는 여러군데 동일하게, 여러개를 동시에 적용할수가 있기 때문에 elements 라고 s를 붙여서 복수형으로 표현.
+  - 이렇게 가져오면 배열형태로 들어옴.
+
+
 - 텍스트 내용입니다. !
     - 안녕하세요 
 1. 숫자내용
