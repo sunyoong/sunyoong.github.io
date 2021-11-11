@@ -143,6 +143,7 @@ repository 만들기
      - ex) id1이라는 요소를 가져온다면 document.querySelector('#id1')
   - class를 가져올 때는 class 앞에 .을 붙여야 함.
      - ex) class1 이라는 요소를 가져온다면 document.querySelector('.class1')
+- querySelcetorAll(.class) : class의 모든 정보를 다 가져옴 
 - getElementsByClassName()
   - 현재 html에 작성된 태그 중 특정 class속성값을 가지고 있는 요소를 가져옴.
   - class 는 여러군데 동일하게, 여러개를 동시에 적용할수가 있기 때문에 elements 라고 s를 붙여서 복수형으로 표현.
