@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(){
+            // DOM제어(document(= body부분에 있는것들이 자바스크립트 입장에서는 객체임. ) object model)
+            // document : 현재 html
+            // getElementById(): ()안에 작성한 특정 id를 가져오겠다. 
+            
+            
+            let ele1 = document.getElementById('id1');
+            console.log(ele1);
+            ele1 = ele1.innerHTML;
+            console.log(ele1);
+              // document라는 객체. 현재 파일이라고 보면 됨. 
+            // .이 찍혔다는 것은 객체가 가지고 있는 것들 중에서 필요한 걸 가져옴.
+            // body에 있지 않은 id값을 가져오면 null이라고 뜸
+            // 전체 요소를 객체로 가져오려면 ineerHTML 붙이지 않음.
+
+            ele2 = document.getElementById('id1').innerHTML;
+            console.log(ele2)
+            // id1 이 적용된 태그 내용 자체를 가져오겠다. 시작태그, 종료태그 사이에 작성한 내용이 ineerHTML
+            // innerHTML : 시작태그 종료태그 사이에 작성된 내용
+        
+            //querySelector()
+            //css에서 선택자 할때도 # 붙임.
+            let ele3 = document.querySelector('#id1');
+            console.log(ele3);
+        
+        
+        }
+        // 여기 있는 ele1이랑 fun1()에 있는 ele1이랑 다름! 
+        function fun2() {
+            // id2가 적용된 태그의 내용을 바꿈. 
+            console.log('fun2함수 호출')
+            let ele1 = document.getElementById('id2'); // 요소를 가져오기 위해 getelement~함. 그래서 ele1에 대입.
+            ele1.innerHTML = '이 내용으로 바꿔봅시다.'; // '이 내용으로~'라는 문구를 ele1(docoument.get~) 의 innerHTML(하하하하) 을 덮어씌운다
+            
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="fun1()">함수호출</button>
+    <button onclick="fun2()">내용변경</button>
+    <p id="id1">
+        안녕하세요. 반갑습니다.
+    </p>
+    <p id="id2">
+        하하하하하
+        
+    </p>
+</body>
+</html>
