@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function fun1() {
+            console.log('fun1()함수 호출됨')
+            const num1 = 5;
+            const num2 = 3;
+
+            let ele1 = document.getElementById('id2');
+            let num3 = num1 + num2;
+            ele1.innerHTML = '<h5>' + num3 + '</h5>';
+
+            let ulPrint = '<ul>'; // ul부호를 만든다
+            for (let i = 0; i < 4; i++) { // ul 부호 뒤에 올 내용을 작성한다.
+                ulPrint += '<li>' + i + '</li>';
+            }
+            ulPrint += '</ul>'; // ul부호를 완성하기 위해 닫아준다.
+            
+            ele1.innerHTML = ulPrint;
+
+        }
+
+
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <p id='id1' onclick='fun1()'>안녕하세요!</p>
+    <p id='id2'></p>
+</body>
+
+</html>
