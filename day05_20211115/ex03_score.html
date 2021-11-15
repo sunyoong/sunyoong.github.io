@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./score.js" defer></script>
+</head>
+<body>
+    점수 : <input type="text" id="score"><br>
+    성적 : <input type="text" id="grade"><br>
+    <button onclick="cal()">성적계산</button>
+    <p id="result" > 여기에 결과를 출력 </p>
+</body>
+</html>
+
+<!-- input태그일때 내용만 보고 싶을때value 사용! 
+일반 p태그일때는 innerHTML으로 내용 출력해야함 -->
+<!-- input태그는 반복태그라서 종료태그,시작태그 없음
+그래서 innerHTML 자체가 없음 -->
+<!-- P태그 같은거는 시작태그, 종료태그가 있기 때문에 innerHTML이 있음 -->

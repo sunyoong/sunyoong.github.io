@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function idCheck() {
+            /* 1. 입력한 id값을 가져오기
+            2. 입력 값을 검증하기(아이디가 있는지 없는지, 길이값(아이디 글자수체크))
+            3. 검증 결과에 따른 메시지 화면출력 
+            */
+            const idValue = document.getElementById('id').value;
+            const idCheckResult = document.getElementById('idCheckResult');
+
+            console.log('입력id : ', idValue);
+            console.log(idValue.length);
+            const idLength = idValue.length;
+            if (idLength == 0) {
+                // console.log('필수항목입니다')
+                idCheckResult.innerHTML = '필수항목입니다';
+                idCheckResult.style.color = 'red';
+            } else if (idLength < 5 || idLength > 20) {
+                // cosole.log('5~20자 이내로 문자를 입력하세요');
+                idCheckResult.innerHTML = '5~20자 이내로 작성해주세요';
+                idCheckResult.style.color = 'red';
+            } else {
+                // console.log('멋진 아이디네요!')
+                idCheckResult.innerHTML = '멋진 아이디네요!';
+                idCheckResult.style.color = 'green';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    아이디 : <input type="text" id="id" onblur="idCheck()" maxlength="20"><br>
+    <!--  span 어딘가에 껴넣을때. 함수이름이랑 아이디값이랑 같으면 안됨 -->
+    <span id="idCheckResult"></span>
+
+</body>
+
+</html>
