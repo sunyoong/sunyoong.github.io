@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- js 파일을 import -->
+    <!-- 별도 파일로 분리? : defer -->
+    <!-- 자바스크립트 이렇게 import할때는 왠만하면 defer 넣어주기 -->
+    <!--  ./: 한단계 위로 올라가서 찾음  -->
+    <!-- ../ : 두단계 위로 올라가서 찾음 -->
+    <script src="./event.js" defer></script>
+</head>
+
+<body>
+    <p id="id1" onclick="fun1()"> 오늘은 금요일</p>
+    <!-- =>  요소 자체에 onclick -->
+    <p id="id2">내일은 토요일</p>
+    <!-- => addEventLister 로 기능설정 -->
+</body>
+
+</html>
