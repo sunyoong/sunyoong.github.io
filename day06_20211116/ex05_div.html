@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* child에 width를 따로 주지 않을경우 부모클래스인 parent 클래스와 같은 width가 적용됨*/
+        /* em: 부모 폰트사이즈 따름 // rem : html 폰트사이즈 따름 // 폰트사이즈의 기본은 16픽셀*/ 
+        html{
+            font-size: 10px;
+        }
+        .parent {
+            width: 300px;
+            height: 200px;
+            background-color: royalblue;
+            font-size: 20px; /*em,rem 기본은 16픽셀?*/
+        }
+        .child {
+            height: 100px;
+            /*10em = 200px. 부모의 font-size가 20.*/
+            /* 10rem = 160px. 별도의 폰트 사이즈를 변경 안했을 경우.*/
+            
+            width: 10rem;
+            /* html의 font-size를 10px으로 했을 경우 10rem = 100px*/
+            background-color: sandybrown;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <!-- parent라는 div 클래스 안에 child라는 div클래스 있는 예시 -->
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+</body>
+</html>

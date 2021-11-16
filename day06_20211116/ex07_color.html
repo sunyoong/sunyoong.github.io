@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .div2 {
+            width: 100px;
+            height: 100px;
+            /* 16진수(0~F => 0.1.2.3.4.5.6.A.B.C.D.E.F.)/ 헥사코드? */
+            /* FF: 2진수로 표현할 경우 F*16^1 + F&16^0 = 15*16 + 15*1 = 255
+            두자리씩 끊어서 보기. => FF: 빨간색(red), 00 : 녹색(green), 00 : 블루(blue)*/
+            background-color: #0000FF;
+        }
+        .div3 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(68, 64, 64);
+            /* 위에있는 16진수인 #FF0000을 10진수로 표현한것이 rgb */
+        }
+        .div4 {
+            width: 100px;
+            height: 100px;
+            /* rgba a: opacity(투명도) */
+            background-color: rgba(0, 255, 98, 0.548);
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+</body>
+</html>
