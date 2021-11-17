@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        // 아이디
+        function idCheck(){
+            // 8~15자 이내로 아이디 입력 
+            const idCk = /^(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()])[a-z\d!@#$%^&*()]{5,15}$/;
+            const id = document.getElementById('id').value;
+            console.log(id);
+            const idCheckResult = document.getElementById('idCheckResult');
+
+            if(id.length==0){
+                idCheckResult.innerHTML = '필수항목입니다.'
+                idCheckResult.style.color = 'red';
+            } else {
+                if(!id.match(idCk)){
+                   idCheckResult.innerHTML = '5~15자 영문 소문자, 숫자, 특수기호를 사용하세요' 
+                   idCheckResult.style.color = 'red';
+                } else {
+                   idCheckResult.innerHTML = '좋습니다!' 
+                   idCheckResult.style.color = 'green';
+                    
+                }
+            }
+        }
+
+        // 비밀번호 
+        function pwCheck(){
+            // 8~15자 이내로 아이디 입력 
+            const pwCondition = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$/;
+            
+            const pw = document.getElementById('pw').value;
+            const pwCheckResult = document.getElementById('pwCheckResult');
+            const pwLength = pw.length;
+            
+            if(pwLength==0){
+                pwCheckResult.innerHTML = '필수항목입니다.'
+                pwCheckResult.style.color = 'red';
+            } else {
+                if(!pw.match(pwCondition)){
+                    pwCheckResult.innerHTML = '8~20자 영문 대 소문자, 숫자, 특수기호를 사용하세요.';
+                    pwCheckResult.style.color = 'red';
+                } else{
+                    pwCheckResult.innerHTML = '좋습니다!'
+                    pwCheckResult.style.color = 'green';
+                }
+            }
+        }
+
+        // 비밀번호 중복확인
+        function pwDoubleCheck(){
+            const pw = document.getElementById('pw').value; // 비밀번호값
+            const pwDoubleCk = document.getElementById('pwDoubleCk').value; // 중복확인 비밀번호값
+            const pwdcResult = document.getElementById('pwdcResult'); // 중복확인 결과값
+            if(pwDoubleCk.length ==0){
+                pwdcResult.innerHTML = '비밀번호를 다시 한 번 입력하세요.'
+            } else {
+                if (pw==pwDoubleCk){
+                    pwdcResult.innerHTML = '일치합니다.' 
+                    pwdcResult.style.color = 'green';
+                 } else{
+                     pwdcResult.innerHTML = '비밀번호가 틀렸습니다.'
+                     pwdcResult.style.color = 'red';
+     
+                 }
+            }
+           
+        }
+
+        //이메일 도메인주소 선택
+        function selectDomain(){
+            const selectedDomain =document.getElementById('selectedDomain').value;
+            const domainId = document.getElementById('domainId');
+            domainId.value = selectedDomain;
+        }
+
+    </script>
+</head>
+<body>
+    <!-- 아이디 -->
+  <div>
+    아이디 : <input type="text" id="id" onblur="idCheck()" placeholder="아이디를 입력하세요"><br>
+    <span id=idCheckResult></span>
+</div><br>
+
+  <!-- 비밀번호 -->
+  <div>
+    비밀번호 : <input type="text" id="pw" onblur="pwCheck()" placeholder="8~20자 이내로 입력하세요"><br>
+    <span id=pwCheckResult></span>
+  </div><br>
+
+  <!-- 비밀번호 확인 -->
+  <div>
+    비밀번호 확인: <input type="text" id="pwDoubleCk" onkeyup="pwDoubleCheck()"><br>
+    <span id=pwdcResult></span>
+  </div><br>
+
+  <!-- 이메일 -->
+  <div>
+    이메일 : <input type="text" name="emailId"> @ <input type="text" id="domainId" name="domainId" placeholder="">
+    <select id="selectedDomain" onchange="selectDomain()">
+        <option disabled>선택하세요</option>
+        <option value="직접입력">직접입력</option>
+        <option value="naver.com">naver.com</option>
+        <option value="gamil.com">gmail.com</option>
+        <option value="daum.net">daum.net</option>
+    </select>
+  </div>
+
+  <!-- 성별 -->
+  <div>
+    성별 : <input type="radio" id="mail" >
+.
+  </div>
+
+  <!-- 전화번호 -->
+  <div>
+
+  </div>
+  
+  <!-- 주소 -->
+  <div>
+
+  </div>
+</body>
+</html>
