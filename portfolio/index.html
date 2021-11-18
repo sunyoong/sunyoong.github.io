@@ -7,24 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    <style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
+     <style>
         body {
-            height: 3000px;
+            height: 1000px;
+            background-color: rgb(236, 231, 209);
         }
         header {
+            position: fixed;
+            width:100%;
             background-color: rgba(100, 187, 158, 0.699);
             /* 0402??*/
         }
 
         section {
-            background-color: rgb(124, 231, 222);
+            background-color: rgb(255, 255, 255);
+            padding-top: 100px;
         }
 
         #intro {
-            background-color: rgb(236, 231, 209);
-
-
-            /* rgb(175, 239, 241) */
+            background-color:rgb(236, 231, 209);
+            font-size: 200;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .intro-title{
+            font-family: 'Roboto', sans-serif;    
+        
         }
 
         #skills {
@@ -32,12 +41,15 @@
         }
 
         #projects {
-            background-color: rgb(230, 243, 181);
+            background-color: rgb(236, 231, 209);
+            padding-top: 50px;
         }
 
         footer {
-            background-color: rgba(211, 108, 160, 0.863);
+            background-color: rgb(236, 231, 209);
         }
+        
+        
     </style>
     
 </head>
@@ -107,7 +119,7 @@
                         <button class="btn btn-outline-primary">sign in</button>
                     </div>
                     <div class="d-grid">
-                        <button class="btn btn-primary">sign up</button>
+                        <button class="btn btn-primary" onclick="location.href='./signup.html'">sign up</button>
                     </div>
                 </div>
             </div>
@@ -118,7 +130,7 @@
     <section id="intro">
         <!-- 자기소개 섹션영역입니다. -->
         <div class="container text-center bg-light py-3">
-            <h3 class="pt-2">저에 대해 궁금하신가요?(자기소개 간단한 멘트)</h3>
+            <h3 class="intro-title pt-2">WHO AM I?</h3>
             <!-- pt : padding top
             py : 위아래 한번에 -->
             <img src="../images/다운로드 (1).jfif" alt="" width="100" height="100">
@@ -129,7 +141,7 @@
 
     <section id="skills">
         <!-- skills 섹션영역입니다. -->
-        <div class="container bg-info mb-3 pt-3 pb-3">
+        <div class="container bg-light py-3">
             <div class="row text-center">
                 <!-- 첫번째줄 내용 -->
                 <h2>Skills</h2>
@@ -137,7 +149,7 @@
             </div>
             <div class="row">
                 <!-- 두번째줄 내용 -->
-                <div class="col-4 text-center" style="background-color: rgb(54, 102, 80); color:aliceblue;">
+                <div class="col-4" style="background-color:rgba(219, 216, 216, 0.589); color:rgb(0, 0, 0);">
                     <!-- 첫번째 -->
                     <div>
                         <h4>Programming Language</h4>
@@ -175,13 +187,13 @@
 
     <section id="projects">
         <!-- projects 섹션영역입니다. -->
-        <div class="container text-center bg-primary mb-3 py-3">
+        <div class="container text-center bg-light mb-3 py-3">
             <h2>Projects</h2>
             <h4 class="mb-4">진행했던 프로젝트를 요약합니다.</h4>
             <div class="row">
                 <div class="col-4">
                     <img class="rounded" src="" alt="">
-                    <p>Spring Framework를 이용한 oooo</p>
+                    <p>java를 이용한 레시피 공유 커뮤니티 게시판</p>
                     <p>개발기간: 2021.00.00~ 2021.00.00</p>
                 </div>
                 <div class="col-4">
@@ -204,7 +216,7 @@
     <footer>
         <!-- 푸터영역 입니다, -->
         <!-- ms = margin start : 왼쪽에 마진을 줌 -->
-        <div class="container bg-light">
+        <div class="container bg-light" width: 100%>
             <footer>
                 <div class="container bg-light">
                     <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
