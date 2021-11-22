@@ -14,7 +14,7 @@
             idCheckResult.innerHTML = '5~15자 영문 소문자, 숫자, 특수기호를 사용하세요'
             idCheckResult.style.color = 'red';
         } else {
-            idCheckResult.innerHTML = '좋습니다!'
+            idCheckResult.innerHTML = '사용이 가능한 아이디입니다.'
             idCheckResult.style.color = 'green';
 
         }
@@ -38,7 +38,7 @@ function pwCheck() {
             pwCheckResult.innerHTML = '8~20자 영문 대 소문자, 숫자, 특수기호를 사용하세요.';
             pwCheckResult.style.color = 'red';
         } else {
-            pwCheckResult.innerHTML = '좋습니다!'
+            pwCheckResult.innerHTML = '사용이 가능한 비밀번호입니다.'
             pwCheckResult.style.color = 'green';
         }
     }
