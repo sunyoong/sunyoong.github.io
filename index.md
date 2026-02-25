@@ -8,7 +8,8 @@ title: 홈
 
 > 마크다운 아주 편하다~
 
-# 최근 포스터 
-{% for post in site.posts %} 
-- [{{ post.title }}] ({{ post.url }}) - {{ post.date | date: "%Y년 %m월 %d일" }}
+
+# 최근 포스트
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%Y년 %m월 %d일" }}
 {% endfor %}
